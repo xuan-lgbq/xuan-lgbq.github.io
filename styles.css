@@ -95,6 +95,8 @@ a:hover {
 }
 
 .contact-card {
+  display: grid;
+  gap: 8px;
   padding-top: 22px;
   border-top: 1px solid var(--line);
   font-size: 14px;
@@ -224,6 +226,16 @@ section > p {
   display: inline-block;
   min-width: 72px;
   color: var(--accent);
+  font-weight: 800;
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 18px;
+}
+
+.social-links a {
   font-weight: 800;
 }
 
