@@ -1,0 +1,269 @@
+:root {
+  --ink: #18212c;
+  --muted: #657083;
+  --line: #d9dee7;
+  --paper: #fbfbf8;
+  --panel: #f0f2f4;
+  --accent: #254566;
+  --accent-soft: #e8eef4;
+  --link: #244f86;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Inter", "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.68;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.page-shell {
+  display: grid;
+  grid-template-columns: minmax(240px, 310px) minmax(0, 820px);
+  gap: 56px;
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 46px 0 72px;
+}
+
+.profile-panel {
+  position: sticky;
+  top: 32px;
+  align-self: start;
+  min-height: calc(100vh - 64px);
+  padding: 32px 28px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, #ffffff 0%, var(--panel) 100%);
+}
+
+.portrait {
+  display: block;
+  width: 136px;
+  height: 136px;
+  margin-bottom: 26px;
+  border: 1px solid #b8c2cf;
+  object-fit: cover;
+}
+
+.profile-panel h1 {
+  margin: 0 0 10px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 34px;
+  line-height: 1.15;
+  letter-spacing: 0;
+}
+
+.role,
+.affiliation {
+  margin: 0 0 8px;
+  color: var(--muted);
+}
+
+.affiliation {
+  margin-top: 14px;
+}
+
+.site-nav {
+  display: grid;
+  gap: 8px;
+  margin: 30px 0;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+
+.site-nav a {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.contact-card {
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  font-size: 14px;
+  word-break: break-word;
+}
+
+.content {
+  min-width: 0;
+}
+
+section {
+  padding: 34px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.hero {
+  padding-top: 8px;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin: 0 0 18px;
+  padding: 6px 10px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.hero h2,
+.section-heading h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: 0;
+}
+
+.hero h2 {
+  margin: 0 0 22px;
+  font-size: clamp(34px, 5vw, 58px);
+  line-height: 1.05;
+}
+
+.hero p,
+section > p {
+  max-width: 760px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.section-heading span {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.interest-list {
+  display: grid;
+  gap: 12px;
+  max-width: 760px;
+  margin: 20px 0 0;
+  padding-left: 22px;
+}
+
+.timeline {
+  display: grid;
+  gap: 22px;
+}
+
+.timeline article {
+  padding-left: 18px;
+  border-left: 3px solid var(--accent);
+}
+
+.timeline time {
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.timeline h3,
+.publication h3 {
+  margin: 4px 0 8px;
+  font-size: 20px;
+  line-height: 1.35;
+}
+
+.timeline p,
+.publication p {
+  margin: 0;
+}
+
+.notice,
+.publication {
+  max-width: 780px;
+  padding: 20px 22px;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.notice {
+  display: grid;
+  gap: 6px;
+}
+
+.news-list {
+  display: grid;
+  gap: 12px;
+  max-width: 780px;
+}
+
+.news-list p {
+  margin: 0;
+}
+
+.news-list time {
+  display: inline-block;
+  min-width: 72px;
+  color: var(--accent);
+  font-weight: 800;
+}
+
+.publication {
+  margin-bottom: 18px;
+}
+
+.publication .authors {
+  margin-bottom: 8px;
+  color: var(--muted);
+}
+
+.publication .award {
+  margin: 10px 0;
+  color: var(--accent);
+  font-weight: 800;
+}
+
+.publication a {
+  display: inline-flex;
+  margin-top: 12px;
+  font-weight: 800;
+}
+
+@media (max-width: 860px) {
+  .page-shell {
+    display: block;
+    width: min(100% - 28px, 760px);
+    padding: 22px 0 56px;
+  }
+
+  .profile-panel {
+    position: static;
+    min-height: 0;
+    margin-bottom: 28px;
+  }
+
+  .portrait {
+    width: 104px;
+    height: 104px;
+    font-size: 34px;
+  }
+}
